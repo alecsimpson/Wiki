@@ -1,7 +1,7 @@
 {% extends "encyclopedia/layout.html" %}
 
 {% block body %}
-<p>{{ entry }}</p>
-<!-- <a href="{% url 'encyclopedia:edit'%}/{{ title }}">Edit</a> -->
+{{ entry | safe }}
+<a href="{% url 'encyclopedia:edit' %}?title={{title}}">Edit Markdown</a>
 {% endblock %}
 
